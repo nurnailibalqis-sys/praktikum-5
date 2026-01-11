@@ -11,20 +11,18 @@
 <br><br>
 <table>
     <tr>
-        <th>NIM</th>
+        <th>NRP</th>
         <th>Nama</th>
-        <th>Program Studi</th>
-        <th>Aksi</th>
+        <th>Alamat</th>
     </tr>
     <?php
     $data = mysqli_query($koneksi, "SELECT * FROM mahasiswa");
     while($d = mysqli_fetch_array($data)){
     ?>
     <tr>
-        <td><?= $d['nim']; ?></td>
+        <td><?= $d['nrp']; ?></td>
         <td><?= $d['nama']; ?></td>
-        <td><?= $d['prodi']; ?></td>
-        <td>
+        <td><?= $d['alamat']; ?></td>
             <a href="edit.php?nim=<?= $d['nim']; ?>" class="btn edit">Edit</a>
             <a href="hapus.php?nim=<?= $d['nim']; ?>" class="btn delete" onclick="return confirm('Yakin hapus?')">Hapus</a>
         </td>
